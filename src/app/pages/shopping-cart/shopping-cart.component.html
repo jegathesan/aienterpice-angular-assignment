@@ -1,0 +1,21 @@
+<div class="page-shopping-cart">
+  <!-- Page Breahcrumbs -->
+  <div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a [routerLink]="['/home']" routerLinkActive="active"> Home </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a [routerLink]="['/shopping-cart']" routerLinkActive="active">
+            Shopping Cart
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <!-- Page Body -->
+  <div>
+    <app-cart></app-cart>
+  </div>
+</div>

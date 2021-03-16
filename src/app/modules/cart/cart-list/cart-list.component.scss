@@ -1,0 +1,12 @@
+@import "../../../../styles.scss";
+
+.cart-list {
+  .cart-heading {
+    border-top: 1px solid $app-gray;
+    border-bottom: 1px solid $app-gray;
+    font-size: 14px;
+  }
+  .cart-items {
+    margin-top: 10px;
+  }
+}

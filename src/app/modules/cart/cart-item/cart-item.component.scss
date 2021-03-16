@@ -1,0 +1,89 @@
+@import "../../../../styles.scss";
+
+.cart-item {
+  border: 1px solid $app-gray;
+  margin-top: 10px;
+  .item-detail {
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    h6 {
+      margin-bottom: 0px;
+    }
+    .item-name,
+    .item-model {
+    }
+    .item-img {
+      width: 40px;
+      margin-right: 20px;
+    }
+    .item-info {
+      flex: 1;
+    }
+    .finance-promo,
+    .wishlist-section {
+      display: flex;
+      align-items: flex-start;
+      font-size: 12px;
+      margin-top: 5px;
+      .btn-link {
+        color: black;
+        padding: 0px;
+      }
+      i {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      img {
+        width: 40px;
+        margin-right: 10px;
+      }
+    }
+    .delivery-desc {
+      margin-top: 5px;
+      color: red;
+    }
+  }
+  .qty-section {
+    padding: 10px;
+    input {
+      width: 50px;
+      text-align: center;
+    }
+  }
+  .delivery-option {
+    background-color: $app-light-gray;
+    padding: 20px;
+    border-top: 1px solid $app-gray;
+    p {
+      margin-right: 20px;
+      margin-bottom: 0px;
+    }
+  }
+  .cart-action {
+    .btn-link {
+      color: black;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (min-width: 575px) {
+  .cart-item {
+    .delivery-option {
+      select {
+        width: 200px;
+        margin-right: 20px;
+      }
+      .store {
+        width: 300px;
+      }
+    }
+    .item-detail {
+      .item-img {
+        width: 80px;
+      }
+    }
+  }
+}

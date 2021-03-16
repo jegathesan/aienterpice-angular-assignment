@@ -1,0 +1,27 @@
+<div
+  class="cart-list"
+  *ngIf="!isLoadingCartDetail && cartResponse.status == 200"
+>
+  <!-- Cart  -->
+  <ng-conatiner *ngIf="cartItems.length > 0">
+    <h6>SHOPPING CART ({{ totalCartItems }})</h6>
+    <div class="row">
+      <div class="col-lg-9">
+        <app-cart-list [cartItems]="cartItems"></app-cart-list>
+      </div>
+      <div class="col-lg-3 mt-4 mt-lg-0">
+        <app-cart-summary [cartSummary]="cartSummary"></app-cart-summary>
+      </div>
+    </div>
+  </ng-conatiner>
+
+  <!-- Empty cart -->
+  <div class="center-content" *ngIf="cartItems.length == 0">
+    <h5>Your cart list is empty</h5>
+  </div>
+</div>
+
+<!-- Loading cart -->
+<div class="center-content" *ngIf="isLoadingCartDetail">
+  <h5>Please wait... Your cart list loading</h5>
+</div>

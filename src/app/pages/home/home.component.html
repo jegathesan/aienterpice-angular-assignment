@@ -1,0 +1,125 @@
+<h1 class="text-center">Assignment</h1>
+<h5 class="py-2 px-4">
+  Please have a look at this page before reviewing the code. It will give you
+  the overwiew how i was developed.
+</h5>
+<div class="py-2 px-4">
+  <b>Note:</b> During when i was working this assignment the given mock url
+  <a
+    href="https://run.mocky.io/v3/ca987707-db46-419e-9178-2bbdde3c3762"
+    target="_blank"
+  >
+    <b>https://run.mocky.io/v3/ca987707-db46-419e-9178-2bbdde3c3762</b>
+  </a>
+  is not working and return <b>CORS</b> issue. So i've created the mock response
+  file and used the mock json to rendere the shopping cart. Also i'm used
+  <b>dummy images</b>
+</div>
+
+<ul>
+  <li>
+    Before runnig application please install <b>node_modules</b> by running
+    command
+    <b>npm i</b>
+  </li>
+  <li>
+    <p>
+      Switch off the mock api mode. Change <b>mockApi</b> as <b>false</b> in
+      <b>environment.ts</b> file. If mockApi is enabled first will look for
+      mockdata from assets if mockdata is not found in assets service will
+      fallback real server
+    </p>
+  </li>
+  <li>
+    <p>Folder Structure</p>
+    <ul>
+      <li>
+        <p>/app</p>
+        <ul>
+          <li>
+            <p>/interceptors (MockData Interceptor for developement)</p>
+          </li>
+          <li>
+            <p>/modules (Application business modules)</p>
+          </li>
+          <li>
+            <p>/pages (Application pages)</p>
+          </li>
+          <li>
+            <p>
+              /services (Includes data providers, Mock data file reference, and
+              Response Interfaces)
+            </p>
+          </li>
+          <li>
+            <p>
+              /shared (Includes app reusable components, Helper classes, Rest
+              end point config, Angular shared module)
+            </p>
+            <ul>
+              <li>
+                <p>/components (Includes app reusable components)</p>
+              </li>
+              <li>
+                <p>/helpers (API Helpers)</p>
+              </li>
+              <li>
+                <p>config.ts (API Endpoints)</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              /theme (Includes bootstrap override logic and CSS variables for
+              global css theme config)
+            </p>
+          </li>
+          <li>
+            <p>
+              /assets (Includes static image, font, js files and mock data
+              files)
+            </p>
+            <ul>
+              <li>
+                /mockdata (Includes mock data files)
+                <ul>
+                  <li>cart-items.json</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Component Layout Structure</p>
+    <div class="border">
+      <p>Shopping Cart Module</p>
+      <div class="border">
+        <p>Bread Crumb</p>
+      </div>
+      <div class="border">
+        <p>Cart Module</p>
+        <div class="row no-gutters">
+          <div class="border col-8">
+            <p>Cart List</p>
+            <div class="border">
+              <p>Cart Item</p>
+            </div>
+            <div class="border">
+              <p>Cart Item</p>
+            </div>
+          </div>
+          <div class="border col-3">
+            <p>Cart Summary</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<a routerLink="/shopping-cart">
+  <h4 class="text-center p-5">View Shopping Cart</h4>
+</a>

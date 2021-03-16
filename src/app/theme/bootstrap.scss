@@ -1,0 +1,8 @@
+.breadcrumb-item {
+  .active {
+    color: black;
+  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">>";
+}

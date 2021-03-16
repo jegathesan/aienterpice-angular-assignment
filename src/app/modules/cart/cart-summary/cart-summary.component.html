@@ -1,0 +1,28 @@
+<div class="cart-summary">
+  <h6>Order Summary</h6>
+  <div class="row">
+    <div class="col-7">Subtotal</div>
+    <div class="col-5 text-right">
+      <b>$ {{ cartSummary?.subtotal }}</b>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">Estimated Shipping</div>
+    <div class="col-5 text-right">
+      <b>$ {{ cartSummary?.shippingAmount }}</b>
+    </div>
+  </div>
+  <div class="row no-gutters estimated-total">
+    <div class="col">Estimated Total</div>
+    <div class="col text-right">
+      <b>$ {{ cartSummary?.cartTotal }}</b>
+    </div>
+  </div>
+  <div>
+    <small class="text-danger">*</small>
+    <small> Sales tax will be calculated at checkout</small>
+  </div>
+  <div class="text-center mt-3">
+    <button class="btn btn-danger">START SECURED CHECKOUT</button>
+  </div>
+</div>

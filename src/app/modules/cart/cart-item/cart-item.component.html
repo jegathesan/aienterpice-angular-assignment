@@ -1,0 +1,86 @@
+<div class="cart-item row no-gutters d-flex align-self-center">
+  <!-- Item Detail -->
+  <div class="col-md-7">
+    <div class="d-flex item-detail">
+      <img
+        class="item-img"
+        src="https://rukminim1.flixcart.com/image/612/612/k8ait8w0/hair-dryer/p/u/7/kubra-kb-153-kb-153-hair-dryer-1800w-hot-and-cold-original-imafqcasgpa5uemy.jpeg?q=70"
+      />
+      <div class="item-info">
+        <a href="">
+          <h6 class="item-name">
+            {{ cartItem?.itemName }}
+          </h6>
+          <div class="item-model">
+            <span>
+              Model: {{ cartItem?.modelNumber }} | Sku:
+              {{ cartItem?.modelCode }}
+            </span>
+          </div>
+        </a>
+        <div class="finance-promo" *ngIf="isProductHaveFinancePromo">
+          <img
+            src="https://www.visa.co.in/dam/VCOM/regional/ap/india/global-elements/images/in-visa-signature-card-498x280.png"
+          />
+          <div>
+            {{ cartItem?.bmFinanceDetail?.financePromoMsg }}
+          </div>
+        </div>
+        <div class="delivery-desc" *ngIf="cartItem?.freeShipping">
+          FREE DELIVERY at this price
+        </div>
+        <div class="wishlist-section">
+          <button type="button" class="btn btn-sm btn-link">
+            <i class="fa fa-heart"> </i>
+            Add to wishlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Item Quantity -->
+  <div
+    class="col-md-2 col-12 align-self-center qty-section d-flex justify-content-center"
+  >
+    <button type="button" class="btn btn-outline-dark">-</button>
+    <input
+      type="text"
+      class="form-control"
+      value="{{ cartItem?.itemQuantity }}"
+    />
+    <button type="button" class="btn btn-outline-dark">+</button>
+  </div>
+  <!-- Item Price -->
+  <div class="col-md-1 col-4 align-self-center text-center">
+    $ {{ cartItem?.itemAmount?.itemPrice }}
+  </div>
+  <!-- Item Total Price -->
+  <div class="col-md-1 col-4 align-self-center text-center">
+    $ {{ cartItem?.itemAmount?.itemTotalPrice }}
+  </div>
+  <!-- Item Action -->
+  <div class="col-md-1 col-4 align-self-center cart-action text-center">
+    <button type="button" class="btn btn-sm btn-link">
+      <i class="fa fa-trash"> </i>
+    </button>
+  </div>
+  <!-- Item Delivery Detail -->
+  <div
+    class="col-12 d-flex flex-column flex-sm-row delivery-option align-items-center"
+  >
+    <p>Choose your delivery option</p>
+    <select class="form-control mt-2 mt-lg-0" [(ngModel)]="shippingType">
+      <option
+        *ngFor="let deliveryOption of deliveryOptions"
+        value="{{ deliveryOption.value }}"
+      >
+        {{ deliveryOption.title }}
+      </option>
+    </select>
+    <select class="form-control store mt-2 mt-lg-0" *ngIf="isStoreShipping">
+      <option *ngFor="let store of stores" value="{{ store.storeId }}">
+        {{ store.storeName }} - ( {{ store.storeDistance }} away )
+      </option>
+    </select>
+  </div>
+</div>

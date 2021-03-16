@@ -1,0 +1,16 @@
+<div class="cart-list">
+  <div class="cart-heading d-none d-md-block">
+    <div class="row no-gutters">
+      <div class="col-sm-7">PRODUCT</div>
+      <div class="col-sm-2 text-center">QTY</div>
+      <div class="col-sm-1 text-center">PRICE</div>
+      <div class="col-sm-1 text-center">TOTAL</div>
+      <div class="col-sm-1 text-center"></div>
+    </div>
+  </div>
+  <div class="cart-items">
+    <ng-conatiner *ngFor="let cartItem of cartItems">
+      <app-cart-item [cartItem]="cartItem"></app-cart-item>
+    </ng-conatiner>
+  </div>
+</div>
